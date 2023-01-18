@@ -28,7 +28,15 @@ public class InputController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        String url = "";
+        String requestURI = request.getRequestURI();
+              
+        // Get sex page
+        if(requestURI.endsWith("/gender.jsp")){
+            url = "/sex.jsp";
+            
+        getServletContext().getRequestDispatcher(url).forward(request, response);
+        }
     }
 
     /**
@@ -46,18 +54,18 @@ public class InputController extends HttpServlet {
         String url = "";
         String requestURI = request.getRequestURI();
               
-        // Process sex
-        if(requestURI.endsWith("/gender.jsp")){
+        // Process sex, then forward to height and weight page
+        if(requestURI.endsWith("/height-weight.jsp")){
             url = getSex(request, response);
         }
              
-        // Process height and weight
-        if(requestURI.endsWith("/height-weight.jsp")){
+        // Process height and weight, then forward to stage page
+        if(requestURI.endsWith("/stage.jsp")){
             url = getHeightAndWeight(request, response);
         }
         
-        // Process stage
-        if(requestURI.endsWith("/stage.jsp")){
+        // Process stage, then forward to plan page
+        if(requestURI.endsWith("/plan.jsp")){
             url = getStage(request, response);
         } 
        
@@ -66,12 +74,10 @@ public class InputController extends HttpServlet {
     
     protected String getSex(HttpServletRequest request, 
             HttpServletResponse response){
-        String url = "/start/height-weight.jsp";
+        String url = "/heightAndWeight.jsp";
         String sex = request.getParameter("sex");
-        if (sex.equals("")) {
-            url = "/start/gender.jsp";
-            String message = "Bạn cần phải chọn nam hoặc nữ";
-            request.setAttribute("message", message);          
+        if(sex == null){
+            url = "/sex.jsp";
         }
         request.setAttribute("sex", sex);        
         return url;
@@ -79,7 +85,7 @@ public class InputController extends HttpServlet {
 
     protected String getHeightAndWeight(HttpServletRequest request, 
             HttpServletResponse response){
-        String url = "/start/stage.jsp";
+        String url = "/stage.jsp";
         
         String sex = request.getParameter("sex");        
         String height = request.getParameter("height");
@@ -89,12 +95,12 @@ public class InputController extends HttpServlet {
         String weightRegex = "\\b([4-9][0-9]?|1[0-4][0-9])";
 
         if (!height.matches(heightRegex)) {
-            url = "/start/height-weight.jsp";
+            url = "/heightAndWeight.jsp";
             String heightMessage = "Chiều cao không hợp lệ";
             request.setAttribute("heightMessage", heightMessage);
         } else if (!weight.matches(weightRegex)) {
             request.setAttribute("height", height);
-            url = "/start/height-weight.jsp";
+            url = "/heightAndWeight.jsp";
             String weightMessage = "Cân nặng không hợp lệ";
             request.setAttribute("weightMessage", weightMessage);
         } else {

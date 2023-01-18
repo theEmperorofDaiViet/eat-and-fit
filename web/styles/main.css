@@ -1,0 +1,213 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Jan 16, 2023, 9:55:49 PM
+    Author     : Admin
+*/
+
+.root{
+    display: flex;
+    align-items: center;
+    height: 100vh ;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #33ffff;
+    /*    background-image:  url("../img/tap-gym-giam-can.jpg") ; 
+        background-repeat: no-repeat;
+        background-size:  cover;*/
+
+}
+.roots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #33ffff;
+    /*    background-image:  url("../img/tap-gym-giam-can.jpg") ; 
+        background-repeat: no-repeat;
+        background-size:  cover;*/
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    font-size: 60px;
+}
+p{
+    font-size: 30px;
+}
+input[type="submit"]{
+    font-family: calibri,'Font Awesome 5 Free';
+    font-size:30px;
+    border-radius: 10px;
+}
+input[type="text"]{
+    font-family: calibri,'Font Awesome 5 Free';
+    font-size:30px;
+    padding-bottom: 5px;
+    left: 30px
+        /*border-radius: 10px;*/
+}
+.sex-tittle{
+    font-size: 40px;
+}
+input[type="radio"]{
+    height: 30px;
+    width: 30px;
+}
+label{
+    font-size: 30px;
+}
+.row{
+    padding-bottom: 30px
+}
+.main{
+
+    display: block;
+    position: relative;
+}
+.sbsex{
+    position: absolute;
+    right: 0;
+}
+
+
+label {
+    float: left;
+    width: 6em;
+    margin-bottom: 0.5em;
+}
+input[type="text"], input[type="email"] {
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+br {
+    clear: both;
+}
+#submit {
+    margin-left: 0.5em;
+}
+.meal{
+    display: flex;
+    padding-bottom: 5px;
+    /*padding-right: 5px;*/
+}
+.containers{
+    display: block;
+    justify-content: center
+}
+.title-gui{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 30px;
+    font-size: 60px;
+}
+.Breakfast,.Dinner,.Lunch{
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px; 
+    border: solid 1px;
+    border-radius: 10px;
+}
+.dish-name{
+    width: 70%;
+    padding-left: 5px;
+}
+.dish-img{
+    display: flex;
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+table th {
+    border: 1px solid #059;
+    background-color: #059;
+    font-family: roboto-medium,sans-serif;
+    color: #fefefe;
+    box-sizing: border-box;
+    text-align: left;
+}
+tbody td, tbody th {
+    padding: 0.4444444444rem 0.5555555556rem 0.5555555556rem;
+}
+.width60 {
+    /*width: 50%;*/
+}
+.dish-detail{
+    display: block;
+    top: 100px;
+    position: relative;
+    width: 1000px;
+    height: auto;
+    background-color: white
+   
+}
+p{
+    font-size: 20px;
+}
+.dish-detail-title{
+    display: flex;
+    align-items: center;
+    padding:30px;
+    /*justify-content: center;*/
+    
+}
+.dish-detail-image{
+    display: flex;
+    width: 170px;
+    height: 140px;
+    /*padding-right: 20px;*/
+}
+.dish-detail-name{
+    display: flex;
+    font-size: 40px;
+    width: 100%;
+    justify-content: center;
+}
+.dish-detail-name h3{
+    display: flex;
+}
+.dish-detail-recipe,.dish-detail-step{
+    display: flex;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 40px
+}
+.gym{
+    right: 0;
+}
+.lower,.upper{
+    display: inline-block
+}
+.NutritionDetail-total{
+    display: flex
+}
+.NutritionDetail{
+        display: flex;
+    padding-left: 170px;
+}
+li{
+    list-style-type: none;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
