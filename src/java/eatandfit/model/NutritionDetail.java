@@ -59,17 +59,17 @@ public class NutritionDetail {
     }
 
     public String getCarbsPer() {
-        double n = this.carbs * 4 / (this.carbs * 4 + this.fat * 9 + this.protein * 4)*100;
+        double n = this.carbs * 4 / (this.carbs * 4 + this.fat * 9 + this.protein * 4) * 100;
         return String.format("%,.2f", n);
     }
 
     public String getFatPer() {
-        double n = this.fat * 9 / (this.carbs * 4 + this.fat * 9 + this.protein * 4)*100;
+        double n = this.fat * 9 / (this.carbs * 4 + this.fat * 9 + this.protein * 4) * 100;
         return String.format("%,.2f", n);
     }
 
     public String getProteinPer() {
-        double n = this.protein * 4 / (this.carbs * 4 + this.fat * 9 + this.protein * 4)*100;
+        double n = this.protein * 4 / (this.carbs * 4 + this.fat * 9 + this.protein * 4) * 100;
         return String.format("%,.2f", n);
     }
 }

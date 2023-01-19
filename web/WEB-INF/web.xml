@@ -9,11 +9,20 @@
         <servlet-name>InputController</servlet-name>
         <servlet-class>eatandfit.controller.InputController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PlanController</servlet-name>
+        <servlet-class>eatandfit.controller.PlanController</servlet-class>
+    </servlet>
     
     <!-- servlet mappings -->
     <servlet-mapping>
         <servlet-name>InputController</servlet-name>
         <url-pattern>/start/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>PlanController</servlet-name>
+        <url-pattern>/plan/*</url-pattern>
     </servlet-mapping>
     
     

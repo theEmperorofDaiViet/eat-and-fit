@@ -18,12 +18,12 @@ public class StandardCaloriesDAO extends DAO{
         super();
     }
 
-    public StandardCalories getStandardCalories(int state, int body, int sex) {
+    public StandardCalories getStandardCalories(int stage, int body, int sex) {
 
         String sql = "SELECT * FROM StandardCalories WHERE Stage = ? and Body = ? and Sex = ?;";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, state);
+            ps.setInt(1, stage);
             ps.setInt(2, body);
             ps.setInt(3, sex);
             ResultSet rs = ps.executeQuery();
