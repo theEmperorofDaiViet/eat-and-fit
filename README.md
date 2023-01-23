@@ -38,6 +38,7 @@ A simple <i>knowledge based system</i> using Fuzzy Logic to provide weight-loss 
 * [![Apache Tomcat][Apache Tomcat-shield]][Apache Tomcat-url]
 * [![HTML5][HTML5-shield]][HTML5-url]
 * [![CSS3][CSS3-shield]][CSS3-url]
+* [![JavaScript][JavaScript-shield]][JavaScript-url]
 * [![MySQL][MySQL-shield]][MySQL-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -84,6 +85,8 @@ You can contact me via:
 [HTML5-url]: https://www.w3.org/html/
 [CSS3-shield]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [CSS3-url]: https://www.w3.org/Style/CSS/
+[JavaScript-shield]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[JavaScript-url]: https://www.ecma-international.org/
 [MySQL-shield]: https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white
 [MySQL-url]: https://www.mysql.com/
 
