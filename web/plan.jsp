@@ -14,6 +14,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>        
         <link rel="stylesheet" href="/eat-and-fit/styles/main.css"/>
         <link rel="icon" type="image/x-icon" href="/eat-and-fit/images/logo.png">      
         <title>Eat & Fit</title>
@@ -21,35 +23,75 @@
     <body>
         <div class="roots" style="overflow: auto">
             <div class="containers">
-                <div class="title-gui" style="display: flex;
-                     justify-content: center;
-                     position: relative;
-                     width: 100%;
-                     top: 30px;
-                     font-size: 60px;
-                     ">Eat & Fit - Hướng dẫn giảm cân</div>
-                <h2>I. Chế độ ăn:</h2>
-                <div style="padding-left: 20px">
-                    <p style="font-size: 20px">Cacbohydrate (đường, tinh bột, chất xơ) là nguồn năng lượng chính cho cơ thể.
-                        Để giảm cân lành mạnh, bạn cần kết hợp duy trì chế độ ăn giảm carb mỗi ngày</p>
+                <div class="title-plan" style="position: relative;">
+                    <div style="display: inline">
+                        <img src="/eat-and-fit/images/logo.png" style="width:128px"></div>
+                    <div style="display: inline; padding-left: 2rem">                        
+                        <h1 style="font-family: sans-serif; font-size:50px; font-weight: bold; margin-block-start: 0.5em; margin-block-end: 0em;">Eat & Fit</h1>
+                        <i style="font-family: sans-serif; font-size: 22px; margin-block-start: 0em; margin-block-end: 0em;">Hướng dẫn giảm cân</i>
+                    </div></div>
 
-                    <p style="font-size: 20px">Chế độ ăn mỗi tuần sẽ bao gồm 3 thực đơn cho các ngày khác nhau trong tuần:</p>
-                    <p style="font-size: 20px"> - Thực đơn nhiều Carbohydrate (dưới 26% tổng calo): 1 ngày/tuần</p>
-                    <p style="font-size: 20px"> - Thực đơn vừa phải Carbohydrate (từ 26% đến 45% tổng calo): 3 ngày/tuần</p>
+                <div style="padding-left: 100px; padding-right: 100px">
+                    <h2 style="margin-block-start: 1em;">I. Chế độ ăn:</h2>
+                    <p style="padding-left: 25.5px; padding-right: 25.5px; font-size: 22px"><b>Cacbohydrate</b> hay <b><i>carbs</i></b> (bao gồm <i>đường, tinh bột, chất xơ</i>) là nguồn năng lượng chính của cơ thể người.
+                        Để giảm cân lành mạnh, bạn nên kết hợp duy trì chế độ ăn giảm carb mỗi ngày.</p>
 
-                    <p style="font-size: 20px"> - Thực đơn ít Carbohydrate (trên 45% tổng calo): 3 ngày/tuần</p>
+                    <p style="padding-left: 25.5px; padding-right: 25.5px; font-size: 22px">Chế độ ăn mỗi tuần sẽ bao gồm 3 thực đơn cho các ngày khác nhau trong tuần:</p>
+                    <ul style="padding-left: 78px;">
+                        <li style="font-size: 20px; list-style-type: disc; padding-bottom: 10px;"><b>Ít Carb</b> (chiếm dưới <b>26%</b> tổng lượng calo nạp vào cơ thể): <b>3</b> ngày/tuần</li>
+                        <li style="font-size: 20px; list-style-type: disc; padding-bottom: 10px;"><b>Vừa phải</b> (chiếm từ <b>26%</b> đến <b>45%</b> tổng lượng calo nạp vào cơ thể): <b>3</b> ngày/tuần</li>
+                        <li style="font-size: 20px; list-style-type: disc; padding-bottom: 10px;"><b>Nhiều Carb</b> (chiếm trên <b>45%</b> tổng lượng calo nạp vào cơ thể): <b>1</b> ngày/tuần</li>
+                    </ul>
                 </div>
                 <div class="row">
                     <div class="col-sm-4 mb-3 mb-sm-0">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Ít Carb</h5>
-                                <ul style="height: 50px;font-size: 10px">
-                                    <li style="display: inline-block;font-size:15px">Calories: ${lowCarbNutritionDetail.calories} calories &nbsp;</li>
-                                    <li style="display: inline-block;font-size:15px">Carbs: ${lowCarbNutritionDetail.carbs}g &nbsp;  (${lowCarbNutritionDetail.getCarbsPer()} %)</li>
-                                    <li style="display: inline-block;font-size:15px">Fat: ${lowCarbNutritionDetail.fat}g   &nbsp;(${lowCarbNutritionDetail.getFatPer()} %) &nbsp;</li>
-                                    <li style="display: inline-block;font-size:15px">Protein: ${lowCarbNutritionDetail.protein}g &nbsp;  (${lowCarbNutritionDetail.getProteinPer()}%)</li>
-                                </ul>
+                                <h5 class="card-title" style="text-align:center; font-weight: bold; font-size: 24px; padding-bottom: 0.5rem;">Ít Carb</h5>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th style="font-size:20px;">Nutrition</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Calories:</b>
+                                            <text style="float:right">${String.format("%.0f", lowCarbNutritionDetail.calories)} cal</text><br/>
+                                            <b>Carbs:</b>
+                                            <text style="float:right">${lowCarbNutritionDetail.carbs} g</text><br/>
+                                            <b>Fat:</b>
+                                            <text style="float:right">${lowCarbNutritionDetail.fat} g</text><br/>
+                                            <b>Protein:</b>
+                                            <text style="float:right">${lowCarbNutritionDetail.protein} g</text><br/>
+                                        </td>
+                                    </tr>
+                                 </table>
+                                <div id="lowCarbChart" style="width: 100%; height: 260px"></div>
+                                <script>
+                                    var lowCarbData = [
+                                                        {x: "Protein", value: ${lowCarbNutritionDetail.protein * 4}},
+                                                        {x: "Fat", value: ${lowCarbNutritionDetail.fat * 9}},
+                                                        {x: "Carbs", value: ${lowCarbNutritionDetail.carbs * 4}, exploded: true}                                  
+                                                      ];
+                                    var lowCarbChart = anychart.pie();
+                                    lowCarbChart.title("Percent Calories From:");
+                                    lowCarbChart.data(lowCarbData);
+                                    lowCarbChart.explode("9%");
+                                    
+                                    var lowCarbPalette = anychart.palettes.distinctColors();
+                                    lowCarbPalette.items(['#D35454', '#38BC56' ,'#F7D300']);
+                                    lowCarbChart.palette(lowCarbPalette);
+                                    
+                                    lowCarbChart.startAngle(0);
+                                    lowCarbChart.stroke("#000000", 3);
+                                    
+                                    lowCarbChart.top('0%');
+                                    
+//                                    lowCarbChart.labels().position("outside");
+//                                    lowCarbChart.connectorStroke({color: "#595959", thickness: 2, dash:"2 2"});   
+                                    
+                                    lowCarbChart.container('lowCarbChart');
+                                    lowCarbChart.draw();                                                                       
+                                </script>
                                 <div class="total-meal">
                                 </div>
                                 <div class="Breakfast">
@@ -100,13 +142,50 @@
                     <div class="col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Vừa phải</h5>
-                                <ul style="height: 50px">
-                                    <li style="display: inline-block;font-size:15px">Calories: ${moderateCarbNutritionDetail.calories} calories &nbsp;</li>
-                                    <li style="display: inline-block;font-size:15px">Carbs: ${moderateCarbNutritionDetail.carbs}g &nbsp;  (${moderateCarbNutritionDetail.getCarbsPer()} %)</li>
-                                    <li style="display: inline-block;font-size:15px">Fat: ${moderateCarbNutritionDetail.fat}g   &nbsp;(${moderateCarbNutritionDetail.getFatPer()} %) &nbsp;</li>
-                                    <li style="display: inline-block;font-size:15px">Protein: ${moderateCarbNutritionDetail.protein}g &nbsp;  (${moderateCarbNutritionDetail.getProteinPer()}%)</li>
-                                </ul>
+                                <h5 class="card-title" style="text-align:center; font-weight: bold; font-size: 24px; padding-bottom: 0.5rem;">Vừa phải</h5>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th style="font-size:20px;">Nutrition</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Calories:</b>
+                                            <text style="float:right">${String.format("%.0f", moderateCarbNutritionDetail.calories)} cal</text><br/>
+                                            <b>Carbs:</b>
+                                            <text style="float:right">${moderateCarbNutritionDetail.carbs} g</text><br/>
+                                            <b>Fat:</b>
+                                            <text style="float:right">${moderateCarbNutritionDetail.fat} g</text><br/>
+                                            <b>Protein:</b>
+                                            <text style="float:right">${moderateCarbNutritionDetail.protein} g</text><br/>
+                                        </td>
+                                    </tr>
+                                 </table>                                
+                                <div id="moderateCarbChart" style="width: 100%; height: 260px"></div>
+                                <script>
+                                    var moderateCarbData = [
+                                                        {x: "Protein", value: ${moderateCarbNutritionDetail.protein * 4}},
+                                                        {x: "Fat", value: ${moderateCarbNutritionDetail.fat * 9}},
+                                                        {x: "Carbs", value: ${moderateCarbNutritionDetail.carbs * 4}, exploded: true}                                  
+                                                      ];                                                                              
+                                    var moderateCarbChart = anychart.pie();
+                                    moderateCarbChart.title("Percent Calories From:");
+                                    moderateCarbChart.data(moderateCarbData);
+                                    moderateCarbChart.explode("9%");
+                                    var moderateCarbPalette = anychart.palettes.distinctColors();
+                                    moderateCarbPalette.items(['#D35454', '#38BC56' ,'#F7D300']);
+                                    moderateCarbChart.palette(moderateCarbPalette);
+                                    
+                                    moderateCarbChart.startAngle(0);
+                                    moderateCarbChart.stroke("#000000", 3);
+                                    
+                                    moderateCarbChart.top('0%');
+                                    
+//                                    moderateCarbChart.labels().position("outside");
+//                                    moderateCarbChart.connectorStroke({color: "#595959", thickness: 2, dash:"2 2"});                                                                     
+                                        
+                                    moderateCarbChart.container('moderateCarbChart');
+                                    moderateCarbChart.draw();
+                                </script>                                
                                 <div class="total-meal">
                                 </div>
                                 <div class="Breakfast">
@@ -157,13 +236,50 @@
                     <div class="col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Nhiều Carb</h5>
-                                <ul style="height: 50px">
-                                    <li style="display: inline-block;font-size:15px">Calories: ${highCarbNutritionDetail.calories} calories &nbsp;</li>
-                                    <li style="display: inline-block;font-size:15px">Carbs: ${highCarbNutritionDetail.carbs}g &nbsp;  (${highCarbNutritionDetail.getCarbsPer()} %)</li>
-                                    <li style="display: inline-block;font-size:15px">Fat: ${highCarbNutritionDetail.fat}g   &nbsp;(${highCarbNutritionDetail.getFatPer()} %) &nbsp;</li>
-                                    <li style="display: inline-block;font-size:15px">Protein: ${highCarbNutritionDetail.protein}g &nbsp;  (${highCarbNutritionDetail.getProteinPer()}%)</li>
-                                </ul>
+                                <h5 class="card-title" style="text-align:center; font-weight: bold; font-size: 24px; padding-bottom: 0.5rem;">Nhiều Carb</h5>
+                                <table style="width:100%">
+                                    <tr>
+                                        <th style="font-size:20px;">Nutrition</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Calories:</b>
+                                            <text style="float:right">${String.format("%.0f", highCarbNutritionDetail.calories)} cal</text><br/>
+                                            <b>Carbs:</b>
+                                            <text style="float:right">${highCarbNutritionDetail.carbs} g</text><br/>
+                                            <b>Fat:</b>
+                                            <text style="float:right">${highCarbNutritionDetail.fat} g</text><br/>
+                                            <b>Protein:</b>
+                                            <text style="float:right">${highCarbNutritionDetail.protein} g</text><br/>
+                                        </td>
+                                    </tr>
+                                 </table>
+                                <div id="highCarbChart" style="width: 100%; height: 260px"></div>
+                                <script>
+                                    var highCarbData = [
+                                                        {x: "Protein", value: ${highCarbNutritionDetail.protein * 4}},
+                                                        {x: "Fat", value: ${highCarbNutritionDetail.fat * 9}},
+                                                        {x: "Carbs", value: ${highCarbNutritionDetail.carbs * 4}, exploded: true}                                  
+                                                      ];                                                                              
+                                    var highCarbChart = anychart.pie();
+                                    highCarbChart.title("Percent Calories From:");
+                                    highCarbChart.data(highCarbData);
+                                    highCarbChart.explode("9%");
+                                    var highCarbPalette = anychart.palettes.distinctColors();
+                                    highCarbPalette.items(['#D35454', '#38BC56' ,'#F7D300']);
+                                    highCarbChart.palette(highCarbPalette);
+                                    
+                                    highCarbChart.startAngle(0);
+                                    highCarbChart.stroke("#000000", 3);
+                                    
+                                    highCarbChart.top('0%');
+                                    
+//                                    highCarbChart.labels().position("outside");
+//                                    highCarbChart.connectorStroke({color: "#595959", thickness: 2, dash:"2 2"});                                                                     
+                                        
+                                    highCarbChart.container('highCarbChart');
+                                    highCarbChart.draw();
+                                </script>                                         
                                 <div class="total-meal">
                                 </div>
                                 <div class="Breakfast">
@@ -212,8 +328,8 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding-left: 20px">
-                    <p style="font-size: 20px">Bạn có thể sắp xếp thứ tự những ngày ăn này tuỳ ý. Nên
+                <div style="padding-left: 100px; padding-right: 100px">
+                    <p style="padding-left: 25.5px; padding-right: 25.5px; font-size: 22px">Bạn có thể sắp xếp thứ tự những ngày ăn này tuỳ ý. Nên
                         dành ngày ăn nhiều Carbohydrate cho những dịp đặc biệt như
                         những bữa tiệc với bạn bè, người thân để có thể ăn uống thoải
                         mái hơn.</p>
@@ -243,7 +359,7 @@
                     <p style="font-size: 20px">Một số bài tập thân dưới và thân trên được đề xuất:</p>
                 </div>
                 <div class="cardio"></div><!-- comment -->
-                <div class="row" style="padding-left: 150px ">
+                <div class="row" style="padding-left: 150px; ">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <h5>Thân dưới</h5>
                         <table>

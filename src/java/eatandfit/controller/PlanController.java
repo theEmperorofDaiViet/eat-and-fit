@@ -81,7 +81,7 @@ public class PlanController extends HttpServlet {
         int sex = Integer.parseInt(request.getParameter("sex"));
         int body = Integer.parseInt(request.getParameter("body"));
         int stage = Integer.parseInt(request.getParameter("stage"));
-        
+              
         // Get standard calories each day for the user based on input information
         StandardCaloriesDAO standardCaloriesDAO = new StandardCaloriesDAO();
         StandardCalories sc = standardCaloriesDAO.getStandardCalories(stage, body, sex);
