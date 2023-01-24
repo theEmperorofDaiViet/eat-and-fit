@@ -23,15 +23,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     position: relative;
     overflow: hidden;
     background-color: #33ffff;
-    /*    background-image:  url("../img/tap-gym-giam-can.jpg") ; 
-        background-repeat: no-repeat;
-        background-size:  cover;*/
-
 }
 .container{
     display: flex;
     align-items: center;
-    height: 200px;
     justify-content: center;
 }
 .title{
@@ -41,9 +36,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     font-size: 30px;
     align-items: center;
     width: auto;
-}
-p{
-    font-size: 30px;
 }
 input[type="submit"]{
     font-family: calibri,'Font Awesome 5 Free';
@@ -127,8 +119,7 @@ br {
     padding-left: 5px;
 }
 .dish-img{
-    display: flex;
-    
+    display: flex;    
 }
 a{
     color: black;
@@ -149,12 +140,9 @@ table, th, td {
 tbody td, tbody th {
     padding: 0.3rem 0.5rem 0.3rem;
 }
-.width60 {
-    /*width: 50%;*/
-}
 .dish-detail{
     display: block;
-    top: 100px;
+    top: 50px;
     position: relative;
     width: 1000px;
     height: auto;
@@ -168,14 +156,7 @@ p{
     display: flex;
     align-items: center;
     padding:30px;
-    /*justify-content: center;*/
-    
-}
-.dish-detail-image{
-    display: flex;
-    width: 170px;
-    height: 140px;
-    /*padding-right: 20px;*/
+    /*justify-content: center;*/   
 }
 .dish-detail-name{
     display: flex;
@@ -183,27 +164,11 @@ p{
     width: 100%;
     justify-content: center;
 }
-.dish-detail-name h3{
-    display: flex;
-}
-.dish-detail-recipe,.dish-detail-step{
-    display: flex;
-    padding-left: 30px;
-    padding-top: 5px;
-    padding-bottom: 40px
-}
 .gym{
     right: 0;
 }
 .lower,.upper{
     display: inline-block
-}
-.NutritionDetail-total{
-    display: flex
-}
-.NutritionDetail{
-        display: flex;
-    padding-left: 170px;
 }
 
 .anychart-credits {
