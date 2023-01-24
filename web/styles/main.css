@@ -140,35 +140,8 @@ table, th, td {
 tbody td, tbody th {
     padding: 0.3rem 0.5rem 0.3rem;
 }
-.dish-detail{
-    display: block;
-    top: 50px;
-    position: relative;
-    width: 1000px;
-    height: auto;
-    background-color: white
-   
-}
 p{
     font-size: 20px;
-}
-.dish-detail-title{
-    display: flex;
-    align-items: center;
-    padding:30px;
-    /*justify-content: center;*/   
-}
-.dish-detail-name{
-    display: flex;
-    font-size: 40px;
-    width: 100%;
-    justify-content: center;
-}
-.gym{
-    right: 0;
-}
-.lower,.upper{
-    display: inline-block
 }
 
 .anychart-credits {
