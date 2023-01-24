@@ -27,9 +27,10 @@
                     <div style="display: inline">
                         <img src="/eat-and-fit/images/logo.png" style="width:128px"></div>
                     <div style="display: inline; padding-left: 2rem">                        
-                        <h1 style="font-family: sans-serif; font-size:50px; font-weight: bold; margin-block-start: 0.5em; margin-block-end: 0em;">Eat & Fit</h1>
+                        <h1 style="font-family: sans-serif; font-size: 50px; font-weight: bold; margin-block-start: 0.5em; margin-block-end: 0em;">Eat & Fit</h1>
                         <i style="font-family: sans-serif; font-size: 22px; margin-block-start: 0em; margin-block-end: 0em;">Hướng dẫn giảm cân</i>
-                    </div></div>
+                    </div>
+                </div>
 
                 <div style="padding-left: 100px; padding-right: 100px">
                     <h2 style="margin-block-start: 1em;">I. Chế độ ăn:</h2>
@@ -334,61 +335,59 @@
                         những bữa tiệc với bạn bè, người thân để có thể ăn uống thoải
                         mái hơn.</p>
                 </div>                    
-                <h2>II. Chế độ Tập luyện:</h2>
-                <div style="padding-left: 20px">
-                    <h3>1. Cardio:</h3>
-                    <p style="font-size: 20px">Bạn nên chọn những bài tập Cardio khiến tim đập nhanh hơn, có thể là tập trên máy
+                <h2 style="padding-left: 90px; padding-right: 90px;">II. Chế độ Tập luyện:</h2>
+                <div style="padding-left: 90px; padding-right: 90px;">
+                    <h3 style="padding-left: 35.5px; padding-right: 35.5px;">1. Cardio:</h3>
+                    <p style="padding-left: 62px; padding-right: 62px; font-size: 20px">Bạn nên chọn những bài tập Cardio khiến tim đập nhanh hơn, có thể là tập trên máy
                         chạy bộ, máy tập hình elip, đạp xe, bơi lội, Squat Jump, Mountain
                         Climbers, Burpee, …</p>
-
-                    <p style="font-size: 20px">Cường độ tập luyện theo tình trạng của bạn là:</p>
-
-                    <p style="font-size: 20px"> Mỗi tuần tập ${cardio.sessions} sessions, mỗi session dài lần lượt ${cardio.time}.</p>
+                    <p style="padding-left: 62px; padding-right: 62px; font-size: 20px">Cường độ tập luyện theo tình trạng của bạn là: mỗi tuần tập ${cardio.sessions} sessions, mỗi session dài lần lượt ${cardio.time}.</p>
                 </div>
-                <div style="padding-left: 20px">
-                    <h3>2. Gym:</h3>
-                    <p style="font-size: 20px">Trong tuần, bạn nên tập xen kẽ các bài tập cho thân trên (upper) và thân dưới (lower). Ví dụ như:</p>
-                    <p style="font-size: 20px">- Thứ hai: Upper</p>
-                    <p style="font-size: 20px">- Thứ ba: Lower</p>
-                    <p style="font-size: 20px">- Thứ tư: nghỉ</p>
-                    <p style="font-size: 20px">- Thứ năm: Upper</p>
-                    <p style="font-size: 20px">- Thứ sáu: Lower</p>
-                    <p style="font-size: 20px">- Thứ bảy: nghỉ</p>
-                    <p style="font-size: 20px">- Chủ nhật: nghỉ</p>
-
-                    <p style="font-size: 20px">Một số bài tập thân dưới và thân trên được đề xuất:</p>
-                </div>
-                <div class="cardio"></div><!-- comment -->
-                <div class="row" style="padding-left: 150px; ">
+                <div style="padding-left: 90px; padding-right: 90px;">
+                    <h3 style="padding-left: 35.5px; padding-right: 35.5px;">2. Gym:</h3>
+                    <p style="padding-left: 62px; padding-right: 62px; font-size: 20px">Trong tuần, bạn nên tập xen kẽ các bài tập cho thân trên (upper) và thân dưới (lower). Ví dụ như:</p>
+                    <ul style="padding-left: 135px; padding-right: 135px;">
+                        <li style="list-style-type: disc; padding-bottom: 10px; font-size: 20px"><b>Thứ hai:</b> Upper</li>
+                        <li style="list-style-type: disc; padding-bottom: 10px; font-size: 20px"><b>Thứ ba:</b> Lower</li>
+                        <li style="list-style-type: disc; padding-bottom: 10px; font-size: 20px"><b>Thứ tư:</b> <i>nghỉ</i></li>
+                        <li style="list-style-type: disc; padding-bottom: 10px; font-size: 20px"><b>Thứ năm:</b> Upper</li>
+                        <li style="list-style-type: disc; padding-bottom: 10px; font-size: 20px"><b>Thứ sáu:</b> Lower</li>
+                        <li style="list-style-type: disc; padding-bottom: 10px; font-size: 20px"><b>Thứ bảy:</b> <i>nghỉ</i></li>
+                        <li style="list-style-type: disc; padding-bottom: 10px; font-size: 20px"><b>Chủ nhật:</b> <i>nghỉ</i></li>
+                    </ul>
+                    <p style="padding-left: 62px; padding-right: 62px; font-size: 20px">Một số bài tập thân dưới và thân trên được đề xuất:</p>
+                </div>                
+                <div class="row" style="padding-left: 152px; ">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <h5>Thân dưới</h5>
-                        <table>
+                        <h4 style="text-align: center; padding-bottom: 10px">Bài tập cho thân dưới</h4>
+                        <table style="width: 95%;">
                             <tr>
-                                <th>Bài tập</th>
+                                <th>&nbsp;Bài tập</th>
                                 <th>Sets</th>
                                 <th>Reps</th>
                             </tr>
                             <c:forEach items="${lowerGyms}" var="gym">
                                 <tr>
-                                    <th class="width60"><div class="dish-name"><a href="plan/exercise?id=${lowerExercises.get(Integer.parseInt(gym.exercise)-1).id}">${lowerExercises.get(Integer.parseInt(gym.exercise)-1).name}</a></div></th>
-                                    <th class="width60">${gym.sets}</th>
-                                    <th class="width60">${gym.reps}</th>
+                                    <td class="width60"><div class="dish-name"><a href="plan/exercise?id=${lowerExercises.get(Integer.parseInt(gym.exercise)-1).id}">${lowerExercises.get(Integer.parseInt(gym.exercise)-1).name}</a></div></td>
+                                    <td class="width60">${gym.sets}</td>
+                                    <td class="width60">${gym.reps}</td>
                                 </tr>
                             </c:forEach>
                         </table>
                     </div>
-                    <div class="col-sm-6"><h5>Thân trên</h5>
-                        <table>
+                    <div class="col-sm-6">
+                        <h4 style="text-align: center; padding-bottom: 10px">Bài tập cho thân trên</h4>
+                        <table style="width: 95%;">
                             <tr>
-                                <th>Bài tập</th>
+                                <th>&nbsp;Bài tập</th>
                                 <th>Sets</th>
                                 <th>Reps</th>
                             </tr>
                             <c:forEach items="${upperGyms}" var="gym">
                                 <tr>
-                                    <th class="width60"><div class="dish-name"><a href="plan/exercise?id=${upperExercises.get(Integer.parseInt(gym.exercise)-7).id}">${upperExercises.get(Integer.parseInt(gym.exercise)-7).name}</a></div></th>
-                                    <th class="width60">${gym.sets}</th>
-                                    <th class="width60">${gym.reps}</th>
+                                    <td class="width60"><div class="dish-name"><a href="plan/exercise?id=${upperExercises.get(Integer.parseInt(gym.exercise)-7).id}">${upperExercises.get(Integer.parseInt(gym.exercise)-7).name}</a></div></td>
+                                    <td class="width60">${gym.sets}</td>
+                                    <td class="width60">${gym.reps}</td>
                                 </tr>
                             </c:forEach>
                         </table>
@@ -397,6 +396,5 @@
                 </div>
             </div>
         </div>
-
     </body>
 </html>
